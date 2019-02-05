@@ -42,9 +42,10 @@
         </div>
         <div class="social">
             <ul>
-                <li><i class="fab fa-facebook-f"></i></li>
-                <li><i class="fab fa-linkedin-in"></i></li>
-                <li><i class="fab fa-whatsapp"></i></li>
+                <li><a href="https://facebook.com/anejjars" target="_blank" title="Add me on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/anejjar" target="_blank" target="_blank" title="Lets connect on Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="0625770102" target="_blank" title="Lest Whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://github.com/anejjar"  target="_blank" title="View on Github"><i class="fab fa-github"></i></a></li>
             </ul>
         </div>
         <div class="things">
@@ -52,6 +53,8 @@
         </div>
     </SECTION>
     <SECTION id="about" class="clear">
+			<div class="about-background"></div>
+			<div class="about-background-2"></div>
         <div class="intro">
             <p class="headtext">Hi, I’m Elhoucine. Nice to meet you.</p>
             <p class="under-headtext">
@@ -162,7 +165,7 @@
             </div>
         </div>
     </SECTION>
-    <div id="testimo" class="clear">
+    <small id="testimo" class="clear">
         <h2 class="headtext">Testimonials</h2>
         <p class="under-headtext">People I've worked with have said some nice things...</p>
         <input type="button" name="change-style" value="Slider" id="slider">
@@ -275,7 +278,7 @@
             <h3 class="headtext">Get in touch</h3>
             <p class="under-headtext" style="padding-left: 20%; text-align: left;">
                 Get in touch using this form or feel free to email me
-                at info@jeffsmith.me. If you are inquiring about working
+							at<i> anejjarelhoucine@gmail.com</i>. If you are inquiring about working
                 with me on a project, please try to provide a few details
                 about your project if at all possible (e.g. requirements,
                 budget, timeline, etc.).
@@ -298,8 +301,47 @@
             </form>
         </div>
     </SECTION>
-    <footer></footer>
+    <section id="info">
+			<h3 class="footer-title">See you Around!</h3>
+			<div class="email">
+				<div class="content">
+					<i class="fab fa-telegram-plane"></i>
+					<h3>anejjarelhoucine@gmail.com</h3>
+				</div>
+			</div>
+			
+			<div class="phone">
+				<div class="content">
+				<i class="fas fa-mobile-alt"></i>
+				<h3>(+212)6 25770102</h3>
+				</div>
+			</div>
+			<div class="facebook">
+				<div class="content">
+				<i class="fab fa-facebook-square"></i>
+				<h3>Elhoucine Anejjar</h3>
+		 		</div>
+			</div>
+	</section>
+	<footer>
+		<div class="footer-logo">
+			<img src="pics/logo.png" alt="logo"> 
+		</div>
+		<div class="footer-menu-1"></div>
+		<div class="footer-menu-2"></div>
+		<!-- Create an anchor tag -->
+<small class="backtop">
+  <a href="#" class="back-to-top">Back to top</a>
+	<p class="push_right">&copy 2019</p>
+</small>
+	</footer>
 </div>
+	
+	
+	
+	
+	
+	
 <script>
   if($('input-control').focus()){
       $('lebel').addClass('focus');
@@ -416,7 +458,11 @@
         $('.testimonials-control').css('display','none');
     }
 
-
+// Back to top
+$('.backtop').on('click', '.back-to-top', function (e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop: 0}, 800);
+});
 </script>
 </body>
 </html>
