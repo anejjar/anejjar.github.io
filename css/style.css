@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+:root{
+	font-size: calc(1vw + 1vh + .5vmin);
+}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,legend,button
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
@@ -7,7 +10,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 /* Modified as appropriate */
 body {
     background:#fff;color:#333;font-size:12px;
-    font-family:"SimSun","Times New Roman","Arial Narrow";
+    font-family:"Roboto","SimSun","Times New Roman","Arial Narrow";
 }
 
 /* A short reference values: 'or"" */
@@ -76,7 +79,6 @@ input::-moz-focus-inner { border: 0; padding: 0;}
 
 
 .container{
-
     margin:0 auto;
 }
 .grid{
@@ -90,7 +92,8 @@ input::-moz-focus-inner { border: 0; padding: 0;}
             " nav . work work work work work work .  "
             " nav testimo testimo testimo testimo testimo testimo testimo testimo  "
             " nav contact contact contact contact contact contact contact contact "
-            " nav footer footer footer footer footer footer footer footer  "
+            " nav . info info info info info info .  "
+						" nav . footer footer footer footer footer footer .  "
 ;
     text-align: center;
 }
@@ -130,16 +133,31 @@ input::-moz-focus-inner { border: 0; padding: 0;}
     background:white;
     overflow:hidden;
     display:grid;
-    grid-template-columns:1fr 1fr  1fr 1fr;
-    grid-template-rows:5vh 35vh 60vh;
+    grid-template-columns:50px 1fr 1fr  1fr 1fr;
+    grid-template-rows:50px auto auto;
     grid-template-areas:
-            " . .  . . "
-            "intro intro  intro intro "
-            " desiner desiner  developer developer  ";
+            " about-background about-background-2   .  .  . "
+            "about-background intro intro  intro intro "
+            " . desiner desiner  developer developer  ";
+}
+.about-background{
+	grid-area: about-background;
+	background:url(
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQoU2NkYGD4D8SMQIwXEFQA000fhVjdTB+rsQYT9a0GAIJ/AgsqfD/KAAAAAElFTkSuQmCC
+    ) repeat;
+}
+.about-background-2{
+	grid-area: about-background-2;
+	background:url(
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQoU2NkYGD4D8SMQIwXEFQA0z0IFWJ4cBC6ESPwAVV/AgtpxVd5AAAAAElFTkSuQmCC
+    ) repeat;
 }
 .intro{
     grid-area: intro;
-    padding-top: 40px;
+    padding: 40px;
+    text-align: start;
 }
 
 .designer{
@@ -162,7 +180,7 @@ input::-moz-focus-inner { border: 0; padding: 0;}
     overflow:hidden;
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
-    grid-template-rows:15vh 60vh;
+    grid-template-rows:50px auto;
     grid-template-areas:
             " . . . . "
             "col1 col1 col2 col2 ";
@@ -173,12 +191,121 @@ input::-moz-focus-inner { border: 0; padding: 0;}
 .col2{
     grid-area: col2;
 }
-footer{
-    grid-area:footer;
-    background: #135058;
+/*======================  info  =======================*/
+#info{
+    grid-area:info;
+	  overflow:hidden;
+    display:grid;
+    grid-template-columns:15% 1fr 1fr 1fr 15%  ;
+    grid-template-rows: 40px 40px 300px 40px;
+    grid-template-areas:
+						" . . . . ."
+						" .  footer-title footer-title footer-title ."
+            ".   email phone facebook . "
+						" . . . . ."
+			;
+	font-size: 1.5em;
+	color: white;
+	
+}
+.footer-title{
+	grid-area:footer-title;
+	text-align: center;
+  font-size: 1.6em;   
+	color: black;
+}
+#info .content{
+	 margin-top: 30%;
+}
+.email{
+	grid-area:email;
+	color:#000000;
+	-background-image:url("https://source.unsplash.com/1600x900/?background");
+	background-repeat: no-repeat;
+  background-color: rgb(240, 240, 240);
+	background-size: cover;
+	 
+}
+.email .content{
+	
+}
+.email i{
+	color:#000000
 }
 
-
+#info i{ 
+		font-size: 3em;
+    color: white;
+		padding-bottom:20px
+	}
+.phone{
+	grid-area:phone;
+	-background-image:url("https://source.unsplash.com/1600x900/?background");
+	background-repeat: no-repeat;
+  background-color: rgb(255, 128, 0);
+	background-size: cover;
+	
+}
+.facebook{
+	grid-area:facebook;
+	-background-image:url("https://source.unsplash.com/1600x900/?background");
+	background-repeat: no-repeat;
+  background-color: rgb(4, 81, 132);
+	background-size: cover;
+}
+/*======================  footer  =======================*/
+footer{
+    grid-area:footer;
+	  overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr  ;
+    grid-template-rows: 40px 100px 40px 20px;
+    grid-template-areas:
+						" . . footer-logo . ."
+						" . footer-menu-1 footer-logo footer-menu-2 ."
+            " . .  footer-logo . . "
+						" backtop backtop backtop backtop backtop "
+						
+			;
+	font-size: 1.5em;
+	color: white;
+	align-items: center;
+	
+}
+.footer-logo{
+	grid-area:footer-logo;
+	color: black;
+}
+.footer-menu-1{
+	grid-area:footer-menu-1;
+	border-top:1px solid black
+}
+.footer-menu-2{
+	grid-area:footer-menu-2;
+	border-top:1px solid black
+}
+.backtop{
+	grid-area:backtop;
+	border: 1px solid black;
+	background: #135058;
+	line-height: 20px;
+}
+.back-to-top{
+	color:#fff;
+}
+.backtop a{
+	color:#ffffff;
+ text-decoration: none;
+	font-size:10px;
+	
+}
+.backtop p{
+	  font-size: 10px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+		color:#fff
+}
 /*======================   =======================*/
 .navbar .logo{
     position: fixed;
@@ -252,6 +379,7 @@ footer{
     left: 100px;
     top: 20px;
     font-family: 'Roboto', sans-serif;
+	  background: #fff;
 }
 #hero .name span {
     background-color: #ffcc00;
@@ -275,7 +403,6 @@ footer{
 .under-headtext {
     margin-top: 25px;
     margin-bottom: 25px;
-    text-align: center;
     font-size: 14px;
     font-weight: 500;
     line-height: 25px;
