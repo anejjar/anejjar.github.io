@@ -10,7 +10,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 /* Modified as appropriate */
 body {
     background:#fff;color:#333;font-size:12px;
-    font-family:"Roboto","SimSun","Times New Roman","Arial Narrow";
+    font-family:"Montserrat","SimSun","Times New Roman","Arial Narrow";
 }
 
 /* A short reference values: 'or"" */
@@ -286,25 +286,25 @@ footer{
 }
 .backtop{
 	grid-area:backtop;
-	border: 1px solid black;
+	border: 1px solid #033e46;
 	background: #135058;
-	line-height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 .back-to-top{
 	color:#fff;
 }
 .backtop a{
 	color:#ffffff;
- text-decoration: none;
+    text-decoration: none;
 	font-size:10px;
 	
 }
 .backtop p{
-	  font-size: 10px;
-    display: inline-block;
-    position: absolute;
-    right: 10px;
-		color:#fff
+	font-size: 10px;
+    display: inline-block;  
+	color:#fff
 }
 /*======================   =======================*/
 .navbar .logo{
